@@ -1,0 +1,34 @@
+{% extends 'hospital/base.html' %}
+
+{% block title %}
+Delete Patient
+{% endblock %}
+
+{% block content %}
+
+<div class="delete-box">
+
+    <h2>Delete Patient</h2>
+
+    <p>
+        Are you sure you want to delete
+        <b>{{ patient.name }}</b>?
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <button type="submit">
+            Delete
+        </button>
+
+        <a href="{% url 'patient_list' %}">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}

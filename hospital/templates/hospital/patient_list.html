@@ -1,0 +1,77 @@
+{% extends 'hospital/base.html' %}
+
+{% block title %}Patients{% endblock %}
+
+{% block content %}
+
+<h2>Patients</h2>
+
+<a href="{% url 'patient_create' %}">
+<button>Add Patient</button>
+</a>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Age</th>
+
+<th>Gender</th>
+
+<th>Disease</th>
+
+<th>Phone</th>
+
+<th>Action</th>
+
+</tr>
+
+{% for patient in patients %}
+
+<tr>
+
+<td>{{ patient.id }}</td>
+
+<td>{{ patient.name }}</td>
+
+<td>{{ patient.age }}</td>
+
+<td>{{ patient.gender }}</td>
+
+<td>{{ patient.disease }}</td>
+
+<td>{{ patient.phone }}</td>
+
+<td>
+
+<a href="{% url 'patient_update' patient.id %}">Edit</a>
+
+|
+
+<a href="{% url 'patient_delete' patient.id %}">Delete</a>
+
+</td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+
+<td colspan="7">
+
+No Patients Found
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

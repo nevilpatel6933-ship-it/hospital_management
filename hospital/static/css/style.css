@@ -1,0 +1,295 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+    background:#0d6efd;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    margin-bottom:15px;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    padding:10px 18px;
+    border-radius:5px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:#0d6efd;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* ===========================
+   Dashboard Cards
+=========================== */
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.card h1{
+    color:#0d6efd;
+    font-size:40px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#084298;
+}
+
+a button{
+    margin-bottom:20px;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:hover{
+    background:#f2f2f2;
+}
+
+/* ===========================
+   Links
+=========================== */
+
+td a{
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 5px;
+}
+
+td a:first-child{
+    color:green;
+}
+
+td a:last-child{
+    color:red;
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+form{
+    background:white;
+    max-width:600px;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+form p{
+    margin-bottom:15px;
+}
+
+form label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+form input,
+form select,
+form textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline:none;
+    border-color:#0d6efd;
+}
+
+/* ===========================
+   Delete Page
+=========================== */
+
+.delete-box{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.delete-box p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.delete-box a{
+    text-decoration:none;
+    margin-left:15px;
+    color:#0d6efd;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    margin-top:50px;
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    form{
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    button{
+        width:100%;
+    }
+
+    table th,
+    table td{
+        font-size:14px;
+        padding:10px;
+    }
+
+}
